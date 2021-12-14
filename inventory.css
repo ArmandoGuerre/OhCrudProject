@@ -1,0 +1,50 @@
+*{margin:0}
+        #pageTitle {
+            background-color: black;
+            width:100%;
+            height: 50px;
+            text-align: center;
+            padding-top: 5px;
+            font-size: larger;
+            font-weight: bolder;
+            color:white
+        }
+        .floatRightInventory{
+            display: none;
+            background-color: lightgrey; 
+            width: 50%;
+            min-height: 410px;
+            float:right;
+            min-height: 300px;
+            align-items: center;
+            text-align:center;
+            
+
+        }
+        .floatLeftLogin {
+            background-color: lightgrey;
+            width: 100%;
+            min-height: 100px;
+            align-items: center;
+            text-align:center;
+            
+        }
+
+        .inventoryEntry {
+            background-color: #C28E0E;
+            width: 50%;
+            min-height: 300px;
+            display: none;
+            align-items: center;
+            text-align:center;
+            float:left
+            
+        }
+        .inventoryInfo {
+            display: none;
+            text-align: center;
+        }
+        .modifications {
+            display: none;
+            text-align: center;
+        }

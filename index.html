@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Inventory Tool</title>
+    <script src="inventoryTemp.js"></script>
+    <script src="inventory.js" defer></script>
+    <link rel="stylesheet" href="inventory.css">
+</head>
+<body>
+    <div id="pageTitle">
+        <p>Armando's Computer Inventory Tool</p>
+    </div>
+<div class = "floatLeftLogin">
+    <input class="uName" type="text" name="username" placeholder="Username" required>
+    <input class = "passcode" type="password" name="password" placeholder="Password" required>
+    <button onclick="login()">Log In</button> 
+    <p class="loginMessage"></p>
+  </div>
+
+  <div class="inventoryEntry">
+    <p>Welcome to the computer inventory. Please submit the workstation hostname, its' assigned user(username), the MAC of the workstation and the static IP adress given to it. An Example of this could be..</p>
+    <br><ul>Workstation Name: IN-ENGR-ET321</ul><ul>Assigned User: joguerre</ul><ul>MAC: 01-FF-E0-4C-85-FE </ul><ul>IP: 192.168.10.102 </ul><br>
+    <input class="workstation" type="text" name="workstationname" placeholder="Computer Workstation" required><br>
+    <input class = "user" type="text" name="username" placeholder="Assigned User" required><br>
+    <input class = "themac" type="text" name="usermac" placeholder="Workstation MAC" required><br>
+    <input class="ipAdd" type="text" name="ipaddress" placeholder="IP ADDRESS" required><br>
+    <button onclick="buildInventoryInstance()">Save</button>  
+</div>
+<div class="floatRightInventory">
+    <ol class = "inventoryList">
+
+    </ol>
+    <br><div class="modifications">To change the assigned IP to another due to a location change, please type in the corresponding record number that is associated to it. The record number is found on the left side of the entry next to hostname.
+    <p class="changeIp"><br>
+        Enter record number
+        <input class = "recordNumber" type="text" name="recordNumber" placeholder="Record Number" required>
+        <button onclick="getInventoryData()">Get Data</button> 
+    </p><hr><br>
+    
+        <div class = "inventoryInfo">
+            <p class= "inventoryData"></p>
+        <br><p>Please Enter New IP Address:
+            <input class = "newIps" type="text" name="newIps" required>
+     
+            <button onclick="saveInventoryData()">Save Entry</button>  
+            <button onclick="removeInventory()">Remove Workstation Information</button> </p>
+         
+        </div>
+</div>
+</div>
+
+</body>
+</html>
